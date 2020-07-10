@@ -15,8 +15,8 @@ The ImportExcel module is needed for this script. You can get it here https://ww
 
 The connection area is there for a VIServer connection, you can connect to multiple severs but you have to restart the connect dialog. You can see if you are connected when [Wait...] switches to [Not connected] or [VIServer connected](one server), or [VIServers connected](multiple servers).
 
-The folder are is empty at start and is only filed with information as soon as you connect to a VIServer.
+The folder is empty at start and is only filed with information as soon as you connect to a VIServer.
 
-The file button determines a File in which the report will be sved.
+The file button determines a File in which the report will be saved.
 
 All you now need to do is press Go and wait for your report to complete.
