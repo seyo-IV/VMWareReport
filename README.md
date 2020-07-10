@@ -12,6 +12,7 @@ The ImportExcel module is needed for this script. You can get it here https://ww
 
 # Usage #
 ![VMWareReport](https://github.com/seyo-IV/VMWareReport/blob/master/images/VMWareReport.PNG)
+
 The connection area is there for a VIServer connection, you can connect to multiple severs but you have to restart the connect dialog. You can see if you are connected when [Wait...] switches to [Not connected] or [VIServer connected](one server), or [VIServers connected](multiple servers).
 
 The folder are is empty at start and is only filed with information as soon as you connect to a VIServer.
