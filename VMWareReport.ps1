@@ -50,7 +50,7 @@ Function Get-VMFolder {
         [System.Windows.Forms.MessageBox]::Show('Connect to VIServer first.', 'Error', 'Ok', 'Error')
     }
     else{
-        $Folder = Get-Folder
+        $Folder = Get-Folder | Sort-Object | Get-Unique
         $Folder_CB.Items.Clear()
         $Folder_CB.Items.Add("All")
         foreach($F in $Folder){
