@@ -20,3 +20,8 @@ The folder is empty at start and is only filed with information as soon as you c
 The file button determines a File in which the report will be saved.
 
 All you now need to do is press Go and wait for your report to complete.
+
+
+# Addon #
+There is also a WPF Version of this one.
+![VMWareReport-WPF](https://github.com/seyo-IV/VMWareReport/blob/master/images/VMWareReport-WPF.PNG)
