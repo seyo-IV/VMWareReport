@@ -69,7 +69,7 @@ if($Folder_CB.Text -eq "All"){
 else {
   $VMs = Get-Folder $Folder_CB.Text | Get-VM
 }
-
+$ProgressBar.Minimum = 1
 foreach($vm in $VMs.Name)
   {
 
@@ -111,7 +111,7 @@ Function Connect-VMVIServer {
 Add-Type -AssemblyName PresentationCore, PresentationFramework
 
 $Xaml = @"
-<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Width="302" Height="97" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0"><Window.Resources>
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Title="Connect" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Width="302" Height="97" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0"><Window.Resources>
   <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
@@ -2661,7 +2661,7 @@ $Window2.ShowDialog()
 Add-Type -AssemblyName PresentationCore, PresentationFramework
 
 $Xaml = @"
-<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Width="358" Height="358" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,3,0,0"><Window.Resources>
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Title="VMWare Report" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Width="358" Height="358" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,3,0,0"><Window.Resources>
   <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
@@ -5182,10 +5182,6 @@ $Window = [Windows.Markup.XamlReader]::Parse($Xaml)
 [xml]$xml = $Xaml
 
 $xml.SelectNodes("//*[@Name]") | ForEach-Object { Set-Variable -Name $_.Name -Value $Window.FindName($_.Name) }
-
-$Window.Title                       = "VMWare Report"
-
-$ProgressBar.Minimum = 1
 
 $Connect_BT.Add_Click({ Connect-VMVIServer })
 
