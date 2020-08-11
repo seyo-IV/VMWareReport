@@ -20,7 +20,9 @@ The folder is empty at start and is only filed with information as soon as you c
 The file button determines a File in which the report will be saved.
 
 All you now need to do is press Go and wait for your report to complete.
-
+# Tip #
+Open the desired script, then choose raw and follow the steps.
+To download only one script and not the whole repo use [wget -O somefile.ps1 -uri https://raw.githubusercontent.com/seyo-IV/VMWareReport/master/WPF-VMWareReport.ps1]
 
 # Addon #
 There is also a WPF Version of this one.
