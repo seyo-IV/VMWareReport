@@ -109,8 +109,8 @@ Function Connect-VMVIServer {
 
 Add-Type -AssemblyName PresentationCore, PresentationFramework
 
-$Xaml = @"
-<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Title=VMWare Report ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Width="302" Height="97" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0"><Window.Resources>
+$Xaml2 = @"
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Title="Connect" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Width="302" Height="97" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0"><Window.Resources>
     <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
@@ -2609,28 +2609,17 @@ $Xaml = @"
 
 <Grid>
  <Button Content="Connect" Name="Connect_VIS_BT" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="197,12,0,0"/>
-<TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="120" TextWrapping="Wrap" Margin="8,11,0,0"/>
+<TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Height="23" Width="120" TextWrapping="Wrap" Margin="8,11,0,0" Name="Connect_VIS_TB"/>
 </Grid></Window>
 "@
 
 
-#-------------------------------------------------------------#
-#----Control Event Handlers-----------------------------------#
-#-------------------------------------------------------------#
 
+$Window2 = [Windows.Markup.XamlReader]::Parse($Xaml2)
 
-#Write your code here
-#endregion
+[xml]$xml2 = $Xaml2
 
-#-------------------------------------------------------------#
-#----Script Execution-----------------------------------------#
-#-------------------------------------------------------------#
-
-$Window2 = [Windows.Markup.XamlReader]::Parse($Xaml)
-
-[xml]$xml = $Xaml
-
-$xml.SelectNodes("//*[@Name]") | ForEach-Object { Set-Variable -Name $_.Name -Value $Window2.FindName($_.Name) }
+$xml2.SelectNodes("//*[@Name]") | ForEach-Object { Set-Variable -Name $_.Name -Value $Window2.FindName($_.Name) }
 
 
 $Connect_VIS_BT.Add_Click{ 
@@ -2657,7 +2646,7 @@ if($Connect_VIS_TB -ne ""){
 }
 }
 
-$Window2.title                       = "Connect to VIServer"
+
 
 $Window2.ShowDialog()
 
@@ -5177,7 +5166,7 @@ $Xaml = @"
 <Button Content="File" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="225,143,0,0" Name="File_BT" Background="#50e3c2"/>
 <Button Content="Go" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="51,242,0,0" Background="#50e3c2" Name="Go_BT"/>
 <ProgressBar HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="100" Margin="193,248,0,0" Name="ProgressBar"/>
-<Border BorderBrush="#9b9b9b" BorderThickness="1" HorizontalAlignment="Left" Height="81" VerticalAlignment="Top" Width="319" Margin="12,18,0,0">
+<Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="81" VerticalAlignment="Top" Width="319" Margin="12,18,0,0">
 </Border>
 <Border BorderBrush="#9b9b9b" BorderThickness="1" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="152" Margin="15,124,0,0">
 </Border>
