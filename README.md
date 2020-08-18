@@ -24,6 +24,7 @@ All you now need to do is press Go and wait for your report to complete.
 Open the desired script, then choose raw and follow the steps.
 To download only one script and not the whole repo use [wget -O somefile.ps1 -uri https://raw.githubusercontent.com/seyo-IV/VMWareReport/master/WPF-VMWareReport.ps1]
 
+You might also need to cahnge the Script encoding to UTF-8-BOM.
 # Addon #
 There is also a WPF Version of this one.
 
