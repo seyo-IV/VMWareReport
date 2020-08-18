@@ -89,9 +89,6 @@ foreach($vm in $VMs.Name)
   }
   $xlfile = [string]$File[1]
   $report | select-Object Name, State, OS, IPv4, Cores, RAM, ProvisionedSpace, UsedSpace | Export-Excel $xlfile -AutoSize -StartRow 1 -TableName VMWare
-  if($i -eq $($VMs.count)){
-      $Progress_LB.text                  = "Export complete."   
-  }
 }
 elseif($File[1] -eq $null -and $global:defaultviserver -ne $null){
   [System.Windows.Forms.MessageBox]::Show('CHoose file first!', 'Error', 'Ok', 'Error')
@@ -2625,19 +2622,16 @@ if($Connect_VIS_TB -ne ""){
     Connect-VIServer $Connect_VIS_TB.Text
     if($global:defaultviserver -ne $null){
   if((Get-View $DefaultViserver.ExtensionData.Client.ServiceContent.SessionManager).count -eq 1){
-        $Status_TB.ForeColor 			  = "#008000"
         $Status_TB.text                  = "VIServer connected"
         Get-VMFolder
   }
   else
   {
-        $Status_TB.ForeColor 			  = "#008000"
         $Status_TB.text                  = "VIServers connected"
         Get-VMFolder
   }
     }
     else{
-        $Status_TB.ForeColor 			  = "#FF0000"
         $Status_TB.text                  = "Not Connected"
     }
     $Window2.Close()
