@@ -68,11 +68,9 @@ if($Folder_CB.Text -eq "All"){
 else {
   $VMs = Get-Folder $Folder_CB.Text | Get-VM
 }
-
+  $ProgressBar.Maximum = $VMs.count
 foreach($vm in $VMs.Name)
   {
-
-  $ProgressBar.Maximum = $VMs.count
   $VMData = Get-VM $vm
   $VMIP = $VMData.guest.IPAddress[0]
   $VMIP = [IPAddress]$VMIP
