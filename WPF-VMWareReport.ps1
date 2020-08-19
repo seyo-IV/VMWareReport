@@ -5158,13 +5158,13 @@ $Xaml = @"
 <Button Content="File" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="225,143,0,0" Name="File_BT" Background="#50e3c2"/>
 <Button Content="Go" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="51,242,0,0" Background="#50e3c2" Name="Go_BT"/>
 <ProgressBar HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="100" Margin="193,248,0,0" Name="ProgressBar"/>
-<Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="81" VerticalAlignment="Top" Width="319" Margin="12,18,0,0">
+<Border CornerRadius="10" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="81" VerticalAlignment="Top" Width="319" Margin="12,18,0,0">
 </Border>
-<Border BorderBrush="#9b9b9b" BorderThickness="1" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="152" Margin="15,124,0,0">
+<Border CornerRadius="10" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="152" Margin="15,124,0,0">
 </Border>
-<Border BorderBrush="#9b9b9b" BorderThickness="1" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="133" Margin="196,123,0,0">
+<Border CornerRadius="10" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="133" Margin="196,123,0,0">
 </Border>
-<Border BorderBrush="#9b9b9b" BorderThickness="1" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="314" Margin="15,215,0,0">
+<Border CornerRadius="10" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="314" Margin="15,215,0,0">
 </Border>
 </Grid></Window>
 "@
