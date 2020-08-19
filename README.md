@@ -28,4 +28,4 @@ You might also need to cahnge the Script encoding to UTF-8-BOM.
 # Addon #
 There is also a WPF Version of this one.
 
-![VMWareReport-WPF](https://github.com/seyo-IV/VMWareReport/blob/master/images/VMWareReport-WPF.PNG)
+![VMWareReport-WPF](https://github.com/seyo-IV/VMWareReport/blob/master/images/WPF-VMWareReport.PNG)
