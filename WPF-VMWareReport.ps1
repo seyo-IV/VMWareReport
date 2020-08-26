@@ -102,7 +102,7 @@ Function Connect-VMVIServer {
 #----Initial Declarations-------------------------------------#
 #-------------------------------------------------------------#
 
-Add-Type -AssemblyName PresentationCore, PresentationFramework
+Add-Type -AssemblyName PresentationCore, PresentationFramework, System.Windows.Forms
 
 $Xaml2 = @"
 <Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Title="Connect" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Width="302" Height="97" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0"><Window.Resources>
