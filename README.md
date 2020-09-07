@@ -3,6 +3,7 @@
 A PowerShell based tool to make VMWare Reports in Excel.
 ## Changes in V2 ##
 V2 has much more increased speed therefore i would recommend using this one.
+
 ![VMWareReport-WPF](https://github.com/seyo-IV/VMWareReport/blob/master/images/WPF-VMWareReport.PNG)
 
 # Setup #
