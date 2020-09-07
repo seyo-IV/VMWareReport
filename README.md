@@ -1,6 +1,9 @@
 # Introduction #
 
 A PowerShell based tool to make VMWare Reports in Excel.
+## Changes in V2 ##
+V2 has much more increased speed therefore i would recommend using this one.
+![VMWareReport-WPF](https://github.com/seyo-IV/VMWareReport/blob/master/images/WPF-VMWareReport.PNG)
 
 # Setup #
 
@@ -22,7 +25,3 @@ Open the desired script, then choose raw and follow the steps.
 To download only one script and not the whole repo use [wget -O somefile.ps1 -uri https://raw.githubusercontent.com/seyo-IV/VMWareReport/master/WPF-VMWareReport.ps1]
 
 You might also need to cahnge the Script encoding to UTF-8-BOM.
-# Addon #
-There is also a WPF Version of this one.
-
-![VMWareReport-WPF](https://github.com/seyo-IV/VMWareReport/blob/master/images/WPF-VMWareReport.PNG)
